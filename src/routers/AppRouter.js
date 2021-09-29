@@ -1,26 +1,25 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter,  Route, Switch, Link, NavLink } from 'react-router-dom'
-import Header from '../components/Header'
-import ExpenseDashboardPage from '../components/ExpenseDashboardPage'
-import AddExpensePage from '../components/AddExpensePage'
-import EditExpensePage from '../components/EditExpensePage'
-import HelpExpensePage from '../components/HelpExpensePage'
-import NotFoundPage from '../components/NotFoundPage'
+import React from "react";
+import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
+import Header from "../components/Header";
+import ExpenseDashboardPage from "../components/ExpenseDashboardPage";
+import AddExpensePage from "../components/AddExpensePage";
+import EditExpensePage from "../components/EditExpensePage";
+import HelpExpensePage from "../components/HelpExpensePage";
+import NotFoundPage from "../components/NotFoundPage";
 
 const AppRouter = () => (
-<BrowserRouter>
+  <BrowserRouter>
     <div>
-        <Header/>
-        <Switch>
-        <Route path="/" component={ExpenseDashboardPage} exact={true}/>
+      <Header />
+      <Switch>
+        <Route path="/" component={ExpenseDashboardPage} exact={true} />
         <Route path="/create" component={AddExpensePage} />
         <Route path="/edit/:id" component={EditExpensePage} />
         <Route path="/help" component={HelpExpensePage} />
         <Route component={NotFoundPage} />
-        </Switch>
+      </Switch>
     </div>
-    </BrowserRouter>
-)
+  </BrowserRouter>
+);
 
-export default AppRouter
+export default AppRouter;
