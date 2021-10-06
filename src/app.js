@@ -4,10 +4,11 @@ import { Provider } from 'react-redux'
 import AppRouter from './routers/AppRouter'
 import configureStore from './store/configureStore'
 import { addExpense } from './actions/expenses'
-import { setTextFilter } from './actions/filters'
 import getVisibleExpenses from './selectors/expenses'
+import './firebase/firebase'
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
+import './playground/promises'
 
 const store = configureStore()
 
@@ -17,7 +18,6 @@ store.dispatch(addExpense({description: 'Rent', amount: 109500}))
 
 const state = store.getState()
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
-console.log(visibleExpenses)
 
 const jsx = (
     <Provider store={store}>
