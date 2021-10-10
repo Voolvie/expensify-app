@@ -9,7 +9,7 @@ export class AddExpensePage extends React.Component {
 
 
      this.props.dispatch(startAddExpense(expense))
-     this.props.history.push('/')   
+     this.props.history.push('/dashboard')   
     }
     render() {
         return(
