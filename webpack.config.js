@@ -12,6 +12,7 @@ module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production'
   return {
   entry: "./src/app.js",
+  target: ['web', 'es5'],
   output: {
     path: path.join(__dirname, "public", "dist"),
     filename: "bundle.js",
